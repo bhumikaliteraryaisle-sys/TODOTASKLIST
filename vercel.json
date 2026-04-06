@@ -1,14 +1,21 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/api/admin.js" },
+    { "src": "/api/telegram", "dest": "/api/telegram.js" },
+    { "src": "/api/admin", "dest": "/api/admin.js" },
+    { "src": "/api/cron", "dest": "/api/cron.js" }
+  ],
   "crons": [
     {
       "path": "/api/cron",
       "schedule": "0 8 * * *"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/api/admin"
     }
   ]
 }
