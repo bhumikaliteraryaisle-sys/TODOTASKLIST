@@ -2,7 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/*.js",
+      "src": "api/telegram.js",
+      "use": "@vercel/node",
+      "config": { "maxDuration": 30 }
+    },
+    {
+      "src": "api/admin.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/cron.js",
       "use": "@vercel/node"
     }
   ],
