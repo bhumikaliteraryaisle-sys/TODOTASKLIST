@@ -15,9 +15,6 @@
       "use": "@vercel/node"
     }
   ],
-  "rewrites": [
-    { "source": "/", "destination": "/api/admin" }
-  ],
   "crons": [
     {
       "path": "/api/cron",
