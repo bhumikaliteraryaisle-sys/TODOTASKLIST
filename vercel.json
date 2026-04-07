@@ -15,6 +15,12 @@
       "use": "@vercel/node"
     }
   ],
+  "routes": [
+    { "src": "/api/telegram", "dest": "/api/telegram.js", "methods": ["GET", "POST"] },
+    { "src": "/api/admin", "dest": "/api/admin.js" },
+    { "src": "/api/cron", "dest": "/api/cron.js" },
+    { "src": "/", "dest": "/api/admin.js" }
+  ],
   "crons": [
     {
       "path": "/api/cron",
